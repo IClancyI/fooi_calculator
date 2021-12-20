@@ -27,3 +27,5 @@ ICONS
 INDIENEN
 
 - github link + surge link
+https://jaric-fooicalc.surge.sh
+https://github.com/IClancyI/fooi_calculator
