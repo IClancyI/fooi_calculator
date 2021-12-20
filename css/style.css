@@ -1,17 +1,344 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 6 | @use "./images/icons";
- *   | ^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   css\style.scss 6:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 6 \2502  @use \"./images/icons\";\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   css\\style.scss 6:1  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+body {
+  background-color: #c5e4e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono";
+}
+
+#logo {
+  margin: auto;
+  margin-top: 100px;
+}
+#logo:after {
+  font-family: "icons";
+  content: "\e003";
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.container {
+  display: flex;
+  background-color: #ffffff;
+  width: 60%;
+  margin: 88px;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.field {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: right;
+  border-radius: 6px;
+  border-color: transparent;
+  font-family: "Space Mono";
+  color: #0e4947;
+  width: 100%;
+}
+.field:hover {
+  border: 2px solid #44b4a6;
+  cursor: pointer;
+}
+.field:active {
+  border: 2px solid #44b4a6;
+}
+
+#dollar {
+  background: url(../images/icon-dollar.svg) no-repeat scroll 7px;
+  background-color: #f3f8fb;
+}
+
+#people {
+  background: url(../images/icon-person.svg) no-repeat scroll 7px;
+  background-color: #f3f8fb;
+}
+
+p {
+  font-size: 12px;
+  color: #697b7d;
+  font-weight: 700;
+}
+
+.sec1 button {
+  border-radius: 6px;
+  color: white;
+  background-color: #00474b;
+  padding: 12px 44px 12px 44px;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+  width: 116px;
+}
+
+.custom {
+  border-radius: 6px;
+  color: #0e4947;
+  text-align: center;
+  height: 40px;
+  width: 116px;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 700;
+  border: transparent;
+  background-color: #f3f8fb;
+}
+.custom:hover {
+  border: 2px solid #44b4a6;
+  cursor: pointer;
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#tips {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.sec1 {
+  width: 50%;
+  margin-right: 48px;
+}
+
+.sec2 {
+  background-color: #00474b;
+  border-radius: 14px;
+  padding: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sec2p {
+  color: white;
+  max-width: 90px;
+}
+.sec2p:after {
+  content: " / person";
+  color: #6aa1a6;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+}
+
+.sec2 button {
+  background-color: #9fe8df;
+  align-items: flex-end;
+}
+
+.reset button {
+  color: #00474b;
+  width: 90%;
+  padding: 10px 0 10px 0;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Space Mono";
+}
+
+.dollar {
+  color: #2cc1ad;
+  font-size: 35px;
+}
+.dollar:before {
+  font-family: "icons";
+  content: "\e001";
+  font-size: 27px;
+}
+
+@media only screen and (max-width: 600px) {
+  body .container {
+    display: block;
+    width: 100%;
+  }
+  body .sec1 {
+    width: 100%;
+  }
+  body .sec2 {
+    width: 100%;
+    padding: 45px 24px 24px 24px;
+  }
+  body #people {
+    margin-bottom: 32px;
+  }
+  body .total {
+    margin-bottom: 20px;
+  }
+  body .dollar {
+    font-size: 25px;
+  }
+  body .dollar:before {
+    font-size: 17px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

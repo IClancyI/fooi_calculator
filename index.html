@@ -4,9 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/icons/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <p>test</p>
+    <p id="logo"></p>
+    <div class="container">
+      <section class="sec1">
+        <form action="" method="post" id="form" class="form" spellcheck="false">
+          <p>Bill</p>
+          <input
+            type="text"
+            name=""
+            id="dollar"
+            class="field"
+            placeholder="0"
+          />
+          <p id="tips">Select Tip %</p>
+          <div class="tips">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="custom"
+              placeholder="Custom"
+            />
+          </div>
+          <p>Number of People</p>
+          <input
+            type="text"
+            name=""
+            id="people"
+            class="field"
+            placeholder="0"
+            required
+          />
+        </form>
+      </section>
+      <section class="sec2">
+        <div class="total">
+          <p class="sec2p">Tip Amount</p>
+          <p class="dollar">0.00</p>
+        </div>
+        <div class="total">
+          <p class="sec2p">Total</p>
+          <p class="dollar">0.00</p>
+        </div>
+        <div class="reset">
+          <button>Reset</button>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

@@ -3,4 +3,199 @@
 @use "./base/variables" as *;
 @use "./base/fonts" as *;
 @use "./base/mixins" as *;
-@use "./images/icons/icons";
+
+body {
+  background-color: $bgc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono";
+}
+
+#logo {
+  margin: auto;
+  margin-top: 100px;
+  &:after {
+    font-family: "icons";
+    content: "\e003";
+    font-size: 50px;
+    font-weight: normal;
+  }
+}
+
+.container {
+  display: flex;
+  background-color: $container;
+  width: 60%;
+  margin: 88px;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.field {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: right;
+  border-radius: 6px;
+  border-color: transparent;
+  font-family: "Space Mono";
+  color: $fieldtext;
+  width: 100%;
+  &:hover {
+    border: 2px solid $borderactive;
+    cursor: pointer;
+  }
+  &:active {
+    border: 2px solid $borderactive;
+  }
+}
+
+#dollar {
+  background: url(../images/icon-dollar.svg) no-repeat scroll 7px;
+  background-color: $field;
+}
+
+#people {
+  background: url(../images/icon-person.svg) no-repeat scroll 7px;
+  background-color: $field;
+}
+
+p {
+  font-size: 12px;
+  color: $pcolor;
+  font-weight: 700;
+}
+
+.sec1 button {
+  border-radius: 6px;
+  color: white;
+  background-color: $button;
+  padding: 12px 44px 12px 44px;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+  width: 116px;
+}
+
+.custom {
+  border-radius: 6px;
+  color: $fieldtext;
+  text-align: center;
+  height: 40px;
+  width: 116px;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 700;
+  border: transparent;
+  background-color: $field;
+  &:hover {
+    border: 2px solid $borderactive;
+    cursor: pointer;
+  }
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#tips {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.sec1 {
+  width: 50%;
+  margin-right: 48px;
+}
+
+.sec2 {
+  background-color: $button;
+  border-radius: 14px;
+  padding: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sec2p {
+  color: white;
+  max-width: 90px;
+  &:after {
+    content: " / person";
+    color: $psec2;
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+}
+
+.sec2 button {
+  background-color: $active;
+  align-items: flex-end;
+}
+
+.reset button {
+  color: $button;
+  width: 90%;
+  padding: 10px 0 10px 0;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Space Mono";
+}
+
+.dollar {
+  color: $total;
+  font-size: 35px;
+  &:before {
+    font-family: "icons";
+    content: "\e001";
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    .container {
+      display: block;
+      width: 100%;
+    }
+    .sec1 {
+      width: 100%;
+    }
+    .sec2 {
+      width: 100%;
+      padding: 45px 24px 24px 24px;
+    }
+
+    #people {
+      margin-bottom: 32px;
+    }
+
+    .total {
+      margin-bottom: 20px;
+    }
+
+    .dollar {
+      font-size: 25px;
+      &:before {
+        font-size: 17px;
+      }
+    }
+  }
+}
